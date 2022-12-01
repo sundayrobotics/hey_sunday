@@ -15,7 +15,7 @@ access_key="LJAhNEy++D83aj0clU0fN67MJnAnyWhEKW+dC4efSBaHD5VkaZKKXA=="
 try:
     porcupine = pvporcupine.create(
         access_key=access_key,
-        keyword_paths=["sample.ppn"]    
+        keywords=["computer","porcupine"]    
     )
 
     pa = pyaudio.PyAudio()
@@ -45,4 +45,4 @@ finally:
         audio_stream.delete()
 
     if pa is not None:
-        pas.terminate()
+        pa.terminate()
